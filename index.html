@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Camino Health — Coming Soon</title>
 <link href="Camino%20Health%20%E2%80%94%20Coming%20Soon_files/css2.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { width: 100%; height: 100%; overflow: hidden; }
@@ -99,61 +100,78 @@
   }
   .eyebrow {
     font-family: 'Jost', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 10px;
-    letter-spacing: 0.52em;
+    letter-spacing: 0.55em;
     text-transform: uppercase;
-    color: rgba(40,65,100,0.65);
-    margin-bottom: 0.9rem;
+    color: rgba(40,65,100,0.75);
+    margin-bottom: 1rem;
+
     opacity: 0;
     animation: fadeIn 1s ease 1.6s forwards;
   }
   .headline {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 300;
-    font-size: clamp(26px, 3.4vw, 50px);
-    line-height: 1.22;
-    color: rgba(18,42,72,0.92);
-    letter-spacing: -0.02em;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(30px, 3.8vw, 54px);
+    line-height: 1.18;
+    color: rgba(18,42,72,0.90);
+    letter-spacing: -0.01em;
     opacity: 0;
     animation: fadeIn 1s ease 1.8s forwards;
   }
-  .headline .line {
-    display: block;
-  }
   .headline em {
     font-style: italic;
-    font-weight: 400;
+    font-weight: 300;
     color: #1a5c8a;
-    letter-spacing: -0.03em;
   }
   .headline strong {
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
     color: rgba(18,42,72,0.95);
   }
+
+  /* ── Mobile ── */
   @media (max-width: 640px) {
+    body { align-items: center; }
     .container {
       flex-direction: column;
-      gap: 1.8rem;
-      padding: 2rem;
+      align-items: center;
+      gap: 1.4rem;
+      padding: 1.5rem 1.8rem;
       top: 50%;
+      width: 100%;
+      max-width: 100vw;
       transform: translate(-50%, -50%) translateY(30px);
+    }
+    .logo {
+      width: 160px;
+      max-width: 55vw;
+    }
+    .divider {
+      width: 48px;
+      height: 1px;
+      align-self: auto;
+      background: linear-gradient(90deg, transparent, rgba(60,80,110,0.35), transparent);
     }
     .text-wrap {
       align-items: center;
       text-align: center;
     }
-    .divider {
-      width: 60px;
-      height: 1px;
-      align-self: auto;
-      background: linear-gradient(90deg, transparent, rgba(60,80,110,0.35), transparent);
+    .eyebrow {
+      font-size: 9px;
+      letter-spacing: 0.45em;
     }
-    .logo {
-      width: 200px;
-      max-width: 65vw;
+    .headline {
+      font-size: clamp(26px, 7.5vw, 36px);
+      line-height: 1.2;
     }
+  }
+
+  /* ── Very small phones ── */
+  @media (max-width: 380px) {
+    .logo { width: 130px; }
+    .headline { font-size: 24px; }
   }
   @keyframes emerge {
     to { opacity: 1; transform: translateX(-50%) translateY(0); }
@@ -179,7 +197,7 @@
   <div class="divider"></div>
   <div class="text-wrap">
     <p class="eyebrow">Coming Soon</p>
-    <h1 class="headline"><span class="line">Your Path to <em>Better</em></span><span class="line"><strong>Coverage</strong></span></h1>
+    <h1 class="headline">Your Path to<br><em>Better</em> <strong>Coverage</strong></h1>
   </div>
 </div>
 
